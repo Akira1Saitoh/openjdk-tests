@@ -60,7 +60,7 @@
 		<variations>
 			<variation>-Xgcpolicy:gencon -Xgc:concurrentScavenge</variation>
 		</variations>
-		<command>$(SYSTEMTEST_CMD_TEMPLATE) -test=LambdaLoadTest -test-args=$(Q)timeLimit=5m$(Q); \
+		<command>export TR_Options='verbose,vlog=vlog.log'; $(SYSTEMTEST_CMD_TEMPLATE) -test=LambdaLoadTest -test-args=$(Q)timeLimit=5m$(Q); \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>sanity</level>
